@@ -12,12 +12,6 @@ git clone https://github.com/caio-andres/system-information.git
 pip install psutil pyodbc
 ```
 
-### Run the script
-
-```bash
-python main.py
-```
-
 ### Connect your SQL with these parameters in connection.py file:
 
 ```bash
@@ -25,6 +19,12 @@ python main.py
 'Server=DESKTOP-DO-MALO\SQLEXPRESS;'
 'Database=System_Information;'
 'Trusted_Connection=yes;'
+```
+
+### Run the script
+
+```bash
+python main.py
 ```
 
 # Technologies used
@@ -37,3 +37,9 @@ python main.py
 - **Analytic Tool:** Power BI
 - **Database:** SQL Server
 - **Database Managemnent Tool:** SSMS (SQL Server Management Studio)
+
+# Project Developer and README Author
+
+```
+@caio_andress
+```
