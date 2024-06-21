@@ -3,7 +3,8 @@ import time
 
 from connection import get_connection
 
-cursor = get_connection.cursor()
+connection = get_connection()
+cursor = connection.cursor()
 
 while 1==1:
   cpu_usage = psutil.cpu_percent()
@@ -32,6 +33,6 @@ while 1==1:
                  + str(disk_usage) + ') '
   )
   
-  get_connection.commit()
+  connection.commit()
   print(memory_usage)
   time.sleep(1)
