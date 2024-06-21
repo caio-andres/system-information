@@ -1,13 +1,9 @@
 import psutil
 import time
-import pyodbc
 
-connection = pyodbc.connect('Driver={SQL Server};'
-                    'Server=DESKTOP-DO-MALO\SQLEXPRESS;'
-                    'Database=System_Information;'
-                    'Trusted_Connection=yes;')
+from connection import get_connection
 
-cursor = connection.cursor()
+cursor = get_connection.cursor()
 
 while 1==1:
   cpu_usage = psutil.cpu_percent()
@@ -36,6 +32,6 @@ while 1==1:
                  + str(disk_usage) + ') '
   )
   
-  connection.commit()
+  get_connection.commit()
   print(memory_usage)
   time.sleep(1)
